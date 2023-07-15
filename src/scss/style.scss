@@ -1,0 +1,77 @@
+@import "fonts";
+@import "spidey";
+@import "nulling-styles";
+@import "2048";
+@import "variables";
+
+.main-page {
+
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 7.5vmin;
+   font-weight: bold;
+   color: white;
+   background-color: #333;
+
+   &__title {
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+   }
+}
+.games {
+   --cell-size: 30vmin;
+
+      height: 80vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__game {
+      width: var(--cell-size);
+      height: var(--cell-size);
+
+      &_spidey {
+         display: inline-block;
+         background-image: url('../img/spidey/spidey.png');
+         background-size: var(--cell-size) var(--cell-size);
+         animation: moveUpDown 1s ease-in-out infinite;
+      }
+      @keyframes moveUpDown {
+         0% {
+         transform: translateY(0);
+         }
+         50% {
+         transform: translateY(-20px);
+         }
+         100% {
+         transform: translateY(0);
+         }
+      }
+
+      &_2048 {
+         
+         background-color: hsl(25, 60%, 60%);
+         border-radius: 1vmin;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 7.5vmin;
+         font-weight: bold;
+         color: white;
+      }
+   }
+}

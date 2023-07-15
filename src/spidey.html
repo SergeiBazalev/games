@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+   "title":"Spidey"
+})
+<body>
+   <main class="game-spidey">
+      <div class="game-spidey__score-spidey score-spidey">
+         <div class="score-spidey__current">
+            <span>Score:</span>
+            <span id="score">0</span>
+         </div>
+         <div class="score-spidey__best">
+            <span>Best score:</span>
+            <span id="best-score">0</span>
+         </div>
+      </div>
+      
+      <div class="game-spidey__game">
+         <div class="game-spidey__spidey" id="spidey"></div>
+         <div class="game-spidey__fire-ball" id="fire-ball"></div>
+         <div class="game-spidey__goblin"></div>
+      </div>
+
+      <div class="game-spidey__buttons">
+         <a href="index.html" class="game-spidey__button">Back</a>
+         <button class="game-spidey__button" id="startButton">Start</button>
+      </div>
+   </main>
+   <script src="js/spidey.min.js"></script>
+   
+</body>
+</html>

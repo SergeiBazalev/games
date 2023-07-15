@@ -1,0 +1,148 @@
+@import "variables";
+
+.game-spidey {
+   background-color: #333;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   height: 100vh;
+   color: white;
+
+   &__game {
+      display: flex;
+      justify-content: space-around;
+      align-items: end;
+      height: 30vh;
+      border-bottom: 1px solid #000;
+      margin: 30px auto 20px;
+   }
+
+   &__spidey {
+      width: 80px;
+      height: 100px;
+      background-image: url('../img/spidey/spidey.png');
+      background-size: 100px 100px;
+      position: relative;
+      &_jump {
+         animation: moveUpDownSpidey 0.5s linear;
+         animation-fill-mode: forwards;
+      }
+   }
+
+   &__fire-ball {
+      width: 40px;
+      height: 40px;
+      background-image: url('../img/spidey/fireBall.png');
+      background-size: 40px 40px;
+      position: relative;
+
+      &_active {  
+         animation: fireBallMove 1s infinite linear;
+      } 
+      @media screen and (min-width: $md-point) {
+         &_active {  
+            animation: fireBallMove 1.5s infinite linear;
+         } 
+      } 
+   }
+
+   &__goblin {
+      width: 200px;
+      height: 200px;
+      background-image: url('../img/spidey/goblin.png');
+      background-size: 200px 200px;
+   }
+
+   @keyframes fireBallMove {
+      0% {
+         left: 30%;
+      }
+      100% {
+         left: -40%;
+      }
+   }
+   
+
+   @keyframes moveUpDownSpidey {
+      0% {
+         transform: translateY(0);
+      }
+      50% {
+         transform: translateY(-100px);
+      }
+      100% {
+         transform: translateY(0);
+      }
+   }
+   
+
+   @media screen and (max-width: $sm-point) {
+      &__goblin {
+         width: 150px;
+         height: 150px; 
+         background-size: 150px 150px;
+      }
+      &__fire-ball {
+         width: 30px;
+         height: 30px;
+         background-size: 30px 30px;
+      }   
+      &__spidey {
+         width: 60px;
+         height: 75px;
+         background-size: 75px 75px;
+      }
+   }
+
+   @media screen and (max-width: $xs-point) {
+      &__goblin {
+         width: 100px;
+         height: 100px; 
+         background-size: 100px 100px;
+      }
+      &__fire-ball {
+         width: 20px;
+         height: 20px;
+         background-size: 20px 20px;
+      }   
+      &__spidey {
+         width: 40px;
+         height: 50px;
+         background-size: 50px 50px;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 80vh;
+      margin: 0 auto;
+      padding: 10px 20px 0;
+      height: 15vh;
+      font-size: 4vmin;
+   }
+
+   &__button {
+      font-family: inherit;
+      background-color: #444;
+      border: none;
+      border-radius: 1vmin;
+      min-height: 10vmin;
+      min-width: 30vmin;
+      font-weight: inherit;
+      color: inherit;
+      font-size: 4vmin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+.score-spidey {
+   font-size: 30px;
+   text-align: center;
+   line-height: 50px; 
+}
+
+
+
+

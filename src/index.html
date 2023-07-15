@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+   "title":"Main page"
+})
+<body>
+   <main>
+      <div class="main-page">
+         <h1 class="main-page__title">Select game</h1>
+         <div class="main-page__games games">
+            <div class="games__block">
+               <h2 class="games__title">Spidey</h2>
+               <a class="games__game games__game_spidey" href="spidey.html"></a>
+            </div>
+            <div class="games__block">
+               <h2 class="games__title">2048</h2>
+               <a class="games__game games__game_2048" id="number-2048" href="2048.html">2</a>
+            </div>
+         </div>
+      </div>
+   </main>
+   <script src="js/app.min.js"></script>
+   
+</body>
+</html>
